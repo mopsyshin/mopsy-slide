@@ -70,17 +70,13 @@ export default {
   },
   mounted() {
     document.addEventListener('keydown', (event) => {
-      if (event.keyCode === 37) {
-        // left arrow key
+      if (event.key === 'ArrowLeft') {
         this.prevSlide();
-      } else if (event.keyCode === 39) {
-        // right arrow key
+      } else if (event.key === 'ArrowRight') {
         this.nextSlide();
-      } else if (event.keyCode === 40) {
-        // down arrow key
+      } else if (event.key === 'ArrowDown') {
         this.toLast();
-      } else if (event.keyCode === 38) {
-        // up arrow key
+      } else if (event.key === 'ArrowUp') {
         this.toFirst();
       }
     });
