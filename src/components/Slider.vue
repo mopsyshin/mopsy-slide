@@ -34,6 +34,8 @@ export default {
     return {
       slides: weworkSlides,
       currentIndex: 0,
+      timer: 0,
+      touchStart: 0,
     };
   },
   methods: {
@@ -67,8 +69,44 @@ export default {
         this.nextSlide();
       }, duration);
     },
+    debounce(callback, duration) {
+        let interval;
+        if (this.timer === 0) {
+            console.log(this.timer);
+            callback();
+        }
+        clearInterval(interval);
+        this.timer = 1;
+        console.log(this.timer);
+        interval = setInterval(() => {
+            this.timer += 1;
+            if (this.timer > duration) {
+                clearInterval(interval);
+                this.timer = 0;
+            }
+        }, 1);
+    },
   },
   mounted() {
+      document.addEventListener('touchstart', (event) => {
+          this.touchStart = event.changedTouches[0].screenX;
+      });
+      document.addEventListener('touchend', (event) => {
+          if (this.touchStart - event.changedTouches[0].screenX > 20) {
+              this.nextSlide();
+          } else if (this.touchStart - event.changedTouches[0].screenX < -20) {
+              this.prevSlide();
+          }
+      });
+    document.addEventListener('mousewheel', (event) => {
+        this.debounce(() => {
+            if (event.deltaY > 0 ) {
+                this.nextSlide();
+            } else {
+                this.prevSlide();
+            }
+        }, 50);
+    });
     document.addEventListener('keydown', (event) => {
       if (event.key === 'ArrowLeft') {
         this.prevSlide();
@@ -161,9 +199,15 @@ button {
 button:focus {
   outline: none;
 }
+@media(max-width: 1000px) {
+    html {
+        font-size: 6.5px;
+    }
+}
 @media(max-width: 450px) {
   html {
     font-size: 5.5px;
   }
 }
+
 </style>
