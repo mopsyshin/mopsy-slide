@@ -72,12 +72,10 @@ export default {
     debounce(callback, duration) {
         let interval;
         if (this.timer === 0) {
-            console.log(this.timer);
             callback();
         }
         clearInterval(interval);
         this.timer = 1;
-        console.log(this.timer);
         interval = setInterval(() => {
             this.timer += 1;
             if (this.timer > duration) {

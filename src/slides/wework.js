@@ -104,6 +104,16 @@ const slides = [
   },
   {
     p: [
+      "시각적인 것에서 정보를 가장 많이 얻기 때문",
+    ],
+    style: {
+      fontSize: '4.8rem',
+      lineHeight: '1.4',
+    },
+  },
+  {
+    p: [
+      "<p style='font-size: 3.2rem;'>Newspaper / Book / Magazine</p>",
       "Editorial Design"
     ],
     style: {
@@ -111,7 +121,8 @@ const slides = [
   },
   {
     p: [
-      "UI / UX Design"
+      "<p style='font-size: 3.2rem;'>PC / SmartPhone / Digital Device</p>",
+      "UI / UX Design",
     ],
     style: {
     },
@@ -122,6 +133,20 @@ const slides = [
     ],
     style: {
       fontSize: '6rem',
+    },
+  },
+  {
+    p: [
+      "Contents Design",
+      "Marketing Material Design",
+      "Editorial Design",
+      "Package Design",
+      "Motion Graphic Design",
+      "...",
+    ],
+    style: {
+      fontSize: '4.8rem',
+      lineHeight: '1.2',
     },
   },
   {
@@ -223,10 +248,26 @@ const slides = [
   },
   {
     p: [
-      "정해진 것은 없다. 목적이 있을 뿐",
+      "정해진 것은 없다. 목적에 따라 선택할 뿐",
+    ],
+    style: {
+      fontSize: '5rem',
+    },
+  },
+  {
+    p: [
+      "UX Research",
     ],
     style: {
       fontSize: '6.4rem',
+    },
+  },
+  {
+    p: [
+      "여러분의 관심과 적극적인 참여가 필요합니다",
+    ],
+    style: {
+      fontSize: '4.8rem',
     },
   },
   {
@@ -234,7 +275,40 @@ const slides = [
       "디자이너와 일하는 법",
     ],
     style: {
-      fontSize: '6.4rem',
+      fontSize: '7.2rem',
+    },
+  },
+  {
+    p: [
+      "우리 조직에 적합한 디자이너를 찾기",
+    ],
+    style: {
+      fontSize: '4.8rem',
+    },
+  },
+  {
+    p: [
+      "Specialist",
+      "Generalist",
+    ],
+    style: {
+      fontSize: '4.8rem',
+    },
+  },
+  {
+    p: [
+      "디자이너의 경험치에 따라 적절한 임무 부여하기",
+    ],
+    style: {
+      fontSize: '4.8rem',
+    },
+  },
+  {
+    p: [
+      "다른 디자이너와 함께 일할 수 있도록 해주기",
+    ],
+    style: {
+      fontSize: '4.8rem',
     },
   },
   {
@@ -242,7 +316,7 @@ const slides = [
       "주도적으로 일할 수 있도록 해주기",
     ],
     style: {
-      fontSize: '6.4rem',
+      fontSize: '4.8rem',
     },
   },
   {
@@ -250,15 +324,15 @@ const slides = [
       "한계를 명확히 설정하기",
     ],
     style: {
-      fontSize: '6.4rem',
+      fontSize: '4.8rem',
     },
   },
   {
     p: [
-      "취향의 문제",
+      "디테일을 무시하지 않기",
     ],
     style: {
-      fontSize: '6.4rem',
+      fontSize: '4.8rem',
     },
   },
   {
